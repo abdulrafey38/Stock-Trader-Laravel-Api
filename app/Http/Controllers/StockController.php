@@ -11,12 +11,16 @@ use App\Portfolio;
 
 class StockController extends Controller
 {
+    
+//========================================================================
     public function index()
     {
         return new StockCollection(Fund::all());
     }
 
-
+//=======================================================================
+    //request come from Vue Js app and store into Dtabase
+    
     public function store(Request $request){
         error_log($request);
         
@@ -36,6 +40,9 @@ class StockController extends Controller
                 ->setStatusCode(201);
 
     }
+    
+//===================================================================================
+    //extract information from databse 7 send response with that information to VUE Js App
 
     public function show()
     {
