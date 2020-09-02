@@ -9,11 +9,11 @@ use Illuminate\Support\Facades\Hash;
 
 class authController extends Controller
 {
+ 
+//============================================================================
+    //login
     public function login(Request $request)
     {
-        
-        
-
         $request->validate([
             'email' => ['required'],
             'password' => ['required'],
@@ -34,6 +34,9 @@ class authController extends Controller
                 'email' => ['The provided credentials are incorrect.'],
             ]);
 }
+    
+//================================================================================
+    //Logout
 
     public function logout(){
 
