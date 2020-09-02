@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Hash;
 
 class RegisterController extends Controller
 {
+   
+//======================================================================
+    //Request come from Vue Js App & user Registered
     public function register(Request $request){
         
 
